@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+    
+
+    <title>Build ChatGPT Using Vanilla JAVA</title>
+</head>
+    <div class="app ">
+        <aside>
+            <nav>
+                <div class="nav-top">
+                    <button id="add-chat">
+                        <i class="bi bi-plus"></i>New Chat
+                    </button>
+                    <ul class="chats">
+                        <li>
+                            <div>
+                                <i class="bi bi-chat-left" ></i>
+                                <span class="chat-title" contenteditable="">New Chat</span>
+                            </div>
+                            <div>
+                                <!-- <button><i class="bi bi-trash3"  onclick="removeChat(this)"></i></button>
+                                <button><i class="bi bi-pen"  onclick="updateChatTitle(this)"></i></button> -->
+                                <i class="bi bi-trash3"  onclick="removeChat(this)"></i>
+                                <i class="bi bi-pen"  onclick="updateChatTitle(this)"></i>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <ul>
+                    <li id="delete">
+                        <i class="bi bi-trash3" >clear conversation</i>
+                    </li>
+                    <li>
+                        <i class="bi bi-gear"></i> settings
+                    </li>
+                    <li id="mode">
+                        <i class="bi bi-brightness-high"></i> light mode
+                    </li>
+                    <li>
+                        <i class="bi bi-globe-americas"></i> english
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="hints">
+                <img src="img/LOGO.png" alt="" class="logo">
+                <p>Enter your message to start a chat.This could be a question, a statement, or any other Text.</p>
+            </div>
+            <div class="qna">
+                <div class="result">
+                    <div class="question">
+                        <i class="bi bi-person-fill-gear" ></i>
+                        <h3>what is web developer</h3>
+                    </div>
+    
+                    <div class="answer">
+                        <i class="bi bi-robot" ></i>
+                        <p>It's all about developing website using different web technologies.</p>
+                    </div>
+                </div>
+                
+            
+                <div class="request">
+                    <i class="bi bi-person-fill-gear" ></i>
+                    <input type="text" id="input-message" placeholder="Provide a prompt ..." autofocus>
+                    <button id="send">Send</button>
+                </div>
+            </div>    
+        </main>
+    </div>
+
+    
+<body>
+    <script defer src="Java.js"></script>
+</body>
+</html>
